@@ -53,7 +53,7 @@
     transform: translate(0, 0);
 }
 body {
-    background-color: #090018;
+    background-color: white;
     margin: 0px;
     font-family: 'M PLUS 1p', sans-serif;
 }
@@ -626,4 +626,39 @@ iframe {
     .top_text_3 {
         bottom: 2vw;
     }
+}
+
+/* -------- */
+/* 問い合わせ */
+/* -------- */
+
+/* 選択タイル */
+.inquiry_radio input{
+	display: none;
+}
+.inquiry_radio label{
+	display: block;
+	float: left;
+	cursor: pointer;
+	width: 80px;
+	margin: 0;
+	padding: 12px 5px;
+	border-right: 1px solid #abb2b7;
+	background: #bdc3c7;
+	color: #555e64;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1;
+	transition: .2s;
+}
+.inquiry_radio label:first-of-type{
+	border-radius: 3px 0 0 3px;
+}
+.inquiry_radio label:last-of-type{
+	border-right: 0px;
+	border-radius: 0 3px 3px 0;
+}
+.inquiry_radio input[type="radio"]:checked + label {
+	background-color: #a1b91d;
+	color: #fff;
 }

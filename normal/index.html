@@ -58,6 +58,8 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="all" href="./css/style.css">
     <link rel="stylesheet" href="./css/magnific-popup.css" />
+    <!-- form.run -->
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
     <!-- slick css -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
@@ -530,6 +532,88 @@
                 <p class="access_text">
                     新宿駅東口より徒歩5分、新宿三丁目駅より徒歩3分
                 </p>
+            </section>
+            <section class="block_inquiry">
+
+                <form class="formrun" action="https://form.run/api/v1/r/fd87y20s1qtbfl0p975uik43" method="post">
+                    <!-- ご予約院 -->
+                    <!-- TODO: data-formrun-type -->
+                    <div class="inquiry_radio">
+                        <input type="radio" name="ご予約院" id="yoyakuin_shinjuku" value="新宿院" checked="">
+                        <label for="yoyakuin_shinjuku">新宿院</label>
+                        <input type="radio" name="ご予約院" id="yoyakuin_ginza" value="銀座院">
+                        <label for="yoyakuin_ginza">銀座院</label>
+                    </div>
+                    <br/>
+                    <!-- ご希望の診療項目 -->
+                    <!-- TODO: data-formrun-type -->
+                    <div class="inquiry_radio">
+                        <input type="radio" name="ご希望の診療項目" id="sejutu_do" value="施術まで希望" checked="">
+                        <label for="sejutu_do">施術まで希望</label>
+                        <input type="radio" name="ご希望の診療項目" id="sejutu_plan" value="施術するかは当日決めたい">
+                        <label for="sejutu_plan">施術するかは当日決めたい</label>
+                        <input type="radio" name="ご希望の診療項目" id="sejutu_no" value="カウンセリングのみ希望">
+                        <label for="sejutu_no">カウンセリングのみ希望</label>
+                    </div>
+
+                    <!-- 第一希望 -->
+                    <!-- TODO: data-formrun-type -->
+
+                    <!-- 第二希望 -->
+                    <!-- TODO: data-formrun-type -->
+
+                    <!-- 第三希望 -->
+                    <!-- TODO: data-formrun-type -->
+
+                    <!-- お名前 -->
+                    <!-- TODO: data-formrun-type -->
+
+                    <div>
+                        <label>お名前</label>
+                        <input name="お名前" type="text">
+                    </div>
+                    <!-- フリガナ  -->
+                    <!-- TODO: data-formrun-type -->
+                    <div>
+                        <label>フリガナ</label>
+                        <input name="フリガナ" type="text">
+                    </div>
+                    <!-- メールアドレス -->
+                    <div>
+                        <label>メールアドレス</label>
+                        <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
+                        <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+                    </div>
+
+                    <!-- 電話番号 -->
+                    <div>
+                        <label>電話番号</label>
+                        <input name="電話番号" type="text">
+                    </div>
+
+                    <!-- 生年月日 -->
+                    <div>
+                        <label>生年月日</label>
+                        <input name="生年月日" type="text">
+                    </div>
+
+
+                    <!-- メッセージ: 任意 -->
+                    <div>
+                        <label>メッセージ</label>
+                        <textarea name="メッセージ"></textarea>
+                    </div>
+
+
+                    <!-- "ボット投稿をブロックするためのタグ" -->
+                    <div class="_formrun_gotcha">
+                        <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+                        <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+                        <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+                    </div>
+                    <!-- 送信ボタン -->
+                    <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+                </form>
             </section>
         </div>
         <div class="line_popup">
