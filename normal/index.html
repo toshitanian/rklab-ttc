@@ -155,6 +155,51 @@
             });
         });
     </script>
+
+    <!-- 問い合わせフォーム用 -->
+    <script type="text/javascript">
+        $(function() {
+
+            // 誕生日:年
+            var currentYear = new Date().getFullYear();
+            var select = document.getElementById("birthday_year");
+            for (var i = 1934; i <= currentYear; i++) {
+                var option = document.createElement("option");
+                option.text = i;
+                option.value = i;
+                // 25歳をデフォルト選択
+                if (i === (currentYear - 25)) {
+                    option.selected = true;
+                }
+                select.appendChild(option);
+            }
+            // 誕生日:月
+            var select = document.getElementById("birthday_month");
+            for (var i = 1; i <= 12; i++) {
+                var option = document.createElement("option");
+                option.text = i;
+                option.value = i;
+                // 1月をデフォルト選択
+                if (i === 1) {
+                    option.selected = true;
+                }
+                select.appendChild(option);
+            }
+            // 誕生日:日
+            var select = document.getElementById("birthday_day");
+            for (var i = 1; i <= 31; i++) {
+                var option = document.createElement("option");
+                option.text = i;
+                option.value = i;
+                // 1日をデフォルト選択
+                if (i === 1) {
+                    option.selected = true;
+                }
+                select.appendChild(option);
+            }
+
+        });
+    </script>
 </head>
 
 <body>
@@ -206,8 +251,15 @@
                             <label>お名前</label>
                             <span class="required">必須</span>
                         </div>
-                        <input name="お名前" type="text" data-formrun-required placeholder="転生 花子">
-                        <div class="error" data-formrun-show-if-error="お名前">お名前を正しく入力してください</div>
+                        <input
+                            name="お名前"
+                            type="text"
+                            data-formrun-type="text"
+                            data-formrun-required
+                            placeholder="転生 花子">
+                        <div class="error" data-formrun-show-if-error="お名前">
+                            お名前を正しく入力してください
+                        </div>
                     </div>
 
                     <!-- フリガナ  -->
@@ -217,8 +269,15 @@
                             <label>フリガナ</label>
                             <span class="required">必須</span>
                         </div>
-                        <input name="フリガナ" type="text" data-formrun-required placeholder="てんせい はなこ">
-                        <div class="error" data-formrun-show-if-error="フリガナ">フリガナを正しく入力してください</div>
+                        <input
+                            name="フリガナ"
+                            type="text"
+                            data-formrun-type="text"
+                            data-formrun-required
+                            placeholder="てんせい はなこ">
+                        <div class="error" data-formrun-show-if-error="フリガナ">
+                            フリガナを正しく入力してください
+                        </div>
                     </div>
                     <!-- メールアドレス -->
                     <div class="inquiry_input">
@@ -226,8 +285,15 @@
                             <label>メールアドレス</label>
                             <span class="required">必須</span>
                         </div>
-                        <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required placeholder="tensei@t-t-c.net">
-                        <div class="error" data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+                        <input
+                            name="メールアドレス"
+                            type="text"
+                            data-formrun-type="email"
+                            data-formrun-required
+                            placeholder="tensei@t-t-c.net">
+                        <div class="error" data-formrun-show-if-error="メールアドレス">
+                            メールアドレスを正しく入力してください
+                        </div>
                     </div>
 
                     <!-- 電話番号 -->
@@ -236,17 +302,38 @@
                             <label>電話番号</label>
                             <span class="required">必須</span>
                         </div>
-                        <input name="電話番号" type="text" data-formrun-type="tel" data-formrun-required placeholder="08012345678">
-                        <div class="error" data-formrun-show-if-error="電話番号">電話番号を正しく入力してください</div>
-
+                        <input
+                            name="電話番号"
+                            type="text"
+                            data-formrun-type="tel"
+                            data-formrun-required
+                            placeholder="08012345678">
+                        <div class="error" data-formrun-show-if-error="電話番号">
+                            電話番号を正しく入力してください
+                        </div>
                     </div>
 
                     <!-- 生年月日 -->
-                    <div>
-                        <label>生年月日</label>
-                        <input name="生年月日" type="text">
+                    <div class="inquiry_input">
+                        <div class="label_wrapper">
+                            <label>生年月日</label>
+                            <span class="required">必須</span>
+                        </div>
+                        <div>
+                            <select id="birthday_year" name="誕生日-年">
+                                <!-- Javascriptで追加される -->
+                            </select>
+                            年
+                            <select id="birthday_month" name="誕生日-月">
+                                <!-- Javascriptで追加される -->
+                            </select>
+                            月
+                            <select id="birthday_day" name="誕生日-日">
+                                <!-- Javascriptで追加される -->
+                            </select>
+                            日
+                        </div>
                     </div>
-
 
                     <!-- メッセージ -->
                     <div class="inquiry_input">
@@ -255,7 +342,10 @@
                             <span class="optional">任意</span>
                         </div>
                         <small class="description">ご希望やご質問などございましたらご記入ください</small>
-                        <textarea name="メッセージ" placeholder="ご希望やご質問などございましたらご記入ください"></textarea>
+                        <textarea
+                            name="メッセージ"
+                            placeholder="ご希望やご質問などございましたらご記入ください">
+                        </textarea>
                     </div>
 
                     <!-- "ボット投稿をブロックするためのタグ" -->
@@ -283,7 +373,7 @@
                 </button>
             </div>
         </div>
-    </div><!-- #wrapper -->
+    </div>
 
 </body>
 

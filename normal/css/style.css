@@ -641,6 +641,8 @@ iframe {
     padding: 50px 0;
     background-color: #f5f5f5;
     flex-direction: column;
+    /* LINEポップアップとぶつからないための余白 */
+    margin-bottom: 50px;
 }
 
 /* Input */
@@ -676,6 +678,14 @@ iframe {
     color: #bbbbbb;
 }
 
+.inquiry_input select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
 .inquiry_input span.required {
     font-size: 12px;
     padding: 2px 5px;
@@ -707,6 +717,17 @@ iframe {
 .inquiry_input small.description {
     font-size: 12px;
     margin: 5px 10px;
+}
+
+.block_inquiry_form_wrapper button   {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f65252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 
@@ -741,3 +762,6 @@ iframe {
 	background-color: #a1b91d;
 	color: #fff;
 }
+
+/* LINEポップアップとぶつからないための余白 */
+
