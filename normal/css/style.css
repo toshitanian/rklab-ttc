@@ -632,6 +632,84 @@ iframe {
 /* 問い合わせ */
 /* -------- */
 
+/* レイアウト */
+
+.block_inquiry_form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f5f5f5;
+    flex-direction: column;
+}
+
+/* Input */
+
+.inquiry_input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inquiry_input .label_wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.inquiry_input label {
+    font-size: 23px;
+    margin: 0 10px;;
+}
+
+.inquiry_input input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.inquiry_input ::placeholder {
+    color: #bbbbbb;
+}
+
+.inquiry_input span.required {
+    font-size: 12px;
+    padding: 2px 5px;
+    background-color: #f65252;
+    color: white;
+}
+
+.inquiry_input span.optional {
+    font-size: 12px;
+    padding: 2px 5px;
+    background-color: #888888;
+    color: white;
+}
+
+.inquiry_input .error {
+    margin: 0 10px;
+    color: #f65252;
+}
+
+.inquiry_input textarea {
+    padding: 10px;
+    font-size: 16px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.inquiry_input small.description {
+    font-size: 12px;
+    margin: 5px 10px;
+}
+
+
 /* 選択タイル */
 .inquiry_radio input{
 	display: none;
@@ -640,7 +718,8 @@ iframe {
 	display: block;
 	float: left;
 	cursor: pointer;
-	width: 80px;
+	width: 100px;
+    height: 30px;
 	margin: 0;
 	padding: 12px 5px;
 	border-right: 1px solid #abb2b7;
