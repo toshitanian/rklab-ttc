@@ -716,6 +716,11 @@ iframe {
     color: #ffffff;
 }
 
+.inquiry_input small {
+    font-size: 12px;
+    margin: 5px 10px;
+}
+
 .inquiry_input .error {
     margin: 0 10px;
     color: #f65252;
@@ -786,5 +791,20 @@ iframe {
 	color: #ffffff;
 }
 
-/* LINEポップアップとぶつからないための余白 */
+.inquiry_privacy_policy {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    margin: 10px;
+    font-size: 13px;
+}
 
+.inquiry_privacy_policy .title {
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    float: center;
+}
+.inquiry_privacy_policy .title p {
+    margin: 0;
+}
