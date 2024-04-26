@@ -645,6 +645,17 @@ iframe {
     /* LINEポップアップとぶつからないための余白 */
     margin-bottom: 50px;
 }
+.inquiry_title {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.inquiry_title .title {
+    font-size: 30px;
+    margin: 0 10px;
+}
+.inquiry_title .description {
+    margin: 0 10px;
+}
 
 /* Input */
 
@@ -750,8 +761,9 @@ iframe {
 	display: none;
 }
 .inquiry_radio label{
-	display: block;
-	float: left;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 	cursor: pointer;
 	width: 50%;
     height: 30px;
@@ -760,7 +772,7 @@ iframe {
 	border-right: 1px solid #abb2b7;
 	background: #ffffff;
 	color: #000000;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 	line-height: 1;
 	transition: .2s;
