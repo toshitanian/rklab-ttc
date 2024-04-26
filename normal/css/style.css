@@ -739,6 +739,13 @@ iframe {
 
 
 /* 選択タイル */
+.inquiry_radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
 .inquiry_radio input{
 	display: none;
 }
@@ -746,13 +753,13 @@ iframe {
 	display: block;
 	float: left;
 	cursor: pointer;
-	width: 100px;
+	width: 50%;
     height: 30px;
 	margin: 0;
 	padding: 12px 5px;
 	border-right: 1px solid #abb2b7;
-	background: #fffddd;
-	color: #555e64;
+	background: #ffffff;
+	color: #000000;
 	font-size: 14px;
 	text-align: center;
 	line-height: 1;
@@ -763,8 +770,8 @@ iframe {
 	border-right: 0px;
 }
 .inquiry_radio input[type="radio"]:checked + label {
-	background-color: #fff570;
-	color: #000000;
+	background-color: #bc9532;
+	color: #ffffff;
 }
 
 /* LINEポップアップとぶつからないための余白 */
