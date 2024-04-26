@@ -56,12 +56,53 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./icon-32x32.png">
     <link rel="manifest" href="./manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../css/style.css">
+
+    <!-- style -->
+    <style>
+        body {
+            font-family: 'M PLUS 1p', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #ffffff;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        .thank_you {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .thank_you .title {
+            font-size: 26px;
+        }
+        .block_header {
+            background-color: #ffffff;
+        }
+    </style>
 
 </head>
 
 <body>
-    Thank you!
+    <div id="wrapper">
+        <section class="block_header">
+            <div class="header_logo">
+                <a href="https://t-t-c.net/" class="link_header_logo">
+                    <img src="../img/tensei_logo.png" alt="Tokyo Tensei Clinic">
+                </a>
+            </div>
+        </section>
+        <section class="thank_you">
+            <p class="title">送信が完了しました</p>
+            <p>
+                お問い合わせいただきありがとうございます。
+                内容を確認後、担当者より３営業日以内にご連絡いたします。
+            </p>
+        </section>
+    </div>
 </body>
 
 </html>
