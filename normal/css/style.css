@@ -638,12 +638,11 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
     background-color: #000000;
     color: #ffffff;
     flex-direction: column;
     /* LINEポップアップとぶつからないための余白 */
-    margin-bottom: 50px;
+    padding-bottom: 75px;
 }
 .inquiry_title {
     width: 100%;
